@@ -17,11 +17,11 @@ function Navigation() {
     const[navigate, setNavigate] = useState(false);
     const Logout = () => {
 
-        localStorage.removeItem('logIn');
+        localStorage.removeItem('login');
         setNavigate(true);
     }
     if (navigate) {
-        return <Navigate to="/logIn"/>
+        return <Navigate to="/login"/>
     }
    
 return (
@@ -40,8 +40,8 @@ return (
             </Navbar>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
-                <Route path={"/signUp"} element={<SignUp/>}/>
-                <Route path={"/logIn"} element={<LogIn/>}/>
+                <Route path={"/signup"} element={<SignUp/>}/>
+                <Route path={"/login"} element={<LogIn/>}/>
                 <Route path={"/employees"} element={<EmployeeList/>}/>
                 <Route path={"add-employees"} element={<CreateEmployee/>}/>
                 <Route path={"employees/update-employees/:id"} element={<UpdateEmploye/>}/>
