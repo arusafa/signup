@@ -1,9 +1,5 @@
-import React from "react";
-
 import {Navbar, Nav} from 'react-bootstrap';
-
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-
 import CreateEmployee from "./CreateEmployee";
 import EmployeeList from "./EmployeeList";
 import Home from "./Home";
@@ -13,6 +9,7 @@ import ViewEmployee from "./ViewEmployee";
 import SignUp from "./SignUp";
 import LogIn from "./LogIn";
 import {Navigate} from "react-router-dom";
+import React, {useState} from "react";
 
 
 function Navigation() {
