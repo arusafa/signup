@@ -1,5 +1,6 @@
 import {Navbar, Nav} from 'react-bootstrap';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+
 import CreateEmployee from "./CreateEmployee";
 import EmployeeList from "./EmployeeList";
 import Home from "./Home";
@@ -8,12 +9,11 @@ import UpdateEmploye from "./UpdateEmployee";
 import ViewEmployee from "./ViewEmployee";
 import SignUp from "./SignUp";
 import LogIn from "./LogIn";
-import {Navigate} from "react-router-dom";
 import React, {useState} from "react";
-
 
 function Navigation() {
 
+    //const nativageTo = useNavigate();
     const[navigate, setNavigate] = useState(false);
     const Logout = () => {
 
@@ -21,7 +21,7 @@ function Navigation() {
         setNavigate(true);
     }
     if (navigate) {
-        return <Navigate to="/login"/>
+        //nativageTo("/login")
     }
    
 return (
@@ -36,7 +36,7 @@ return (
                     <Nav.Link className="btn btn-info" style={{marginLeft:"40px", color:"blue"}} href="/employees">Employees</Nav.Link>
                 </Nav>
                 </div>
-                <Link onClick={Logout} className="btn btn-outline-danger w-25" style={{marginLeft:"180px", color:"white"}}>Logout</Link>
+                <Link to={"/"} onClick={Logout} className="btn btn-outline-danger w-25" style={{marginLeft:"180px", color:"white"}}>Logout</Link>
             </Navbar>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>

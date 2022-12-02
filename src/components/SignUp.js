@@ -40,7 +40,7 @@ export default function SignUp() {
   return (
     <div>
         <div style={{marginTop:"20px", marginBottom:"20px"}} className="row">
-            <div className="card col-md-6 offset-md-3 offset-md-3">
+            <div className="card col-md-6 offset-md-3 offset-md-3" style={{backgroundColor:"#ebe6e1"}}>
                 <h3 className="text-center">SignUp</h3>
                 <div className="card-body">
                     <form>
@@ -59,9 +59,9 @@ export default function SignUp() {
                             <input type='email' className="form-control" name="email" placeholder="Enter an email address"
                             onChange={e => handleInputChange(e)}/>
                         </div>
-                        <Button variant="primary" onClick={e => onSubmit(e)}>Submit</Button>
-                            &nbsp;&nbsp;&nbsp;
-                        <Link to={"/employees"}><Button className="btn btn-danger" >Cancel</Button>
+                        <Button variant="success" onClick={e => onSubmit(e)}>Submit</Button>
+                            &nbsp;&nbsp;&nbsp;Already have an account:    
+                        <Link to={"/login"}><Button style={{marginRight:35}} className="btn btn-primary" >LogIn</Button>
                         </Link>
                     </form>
                 </div>
